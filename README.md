@@ -1,32 +1,18 @@
-# SmartCAD-AI FastAPI + React
+# SmartCAD-AI Backend
 
-This workspace turns `SmartCAD_AI.ipynb` into a small full-stack app:
+FastAPI service extracted from `SmartCAD_AI.ipynb`.
 
-- FastAPI backend with the notebook dataset, 12-rule engine, GBM classifier, and fusion verdict.
-- React frontend for product selection, CAD parameters, sample cases, and validation results.
-
-## Backend
+## Run
 
 ```powershell
-cd backend
 uv sync
 uv run uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-The API exposes:
+## Endpoints
 
 - `GET /health`
 - `GET /metadata`
 - `POST /validate`
 - `POST /validate/batch`
-
-## Frontend
-
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-Open `http://127.0.0.1:5173`. The Vite dev server proxies `/api/*` calls to the backend.
 
